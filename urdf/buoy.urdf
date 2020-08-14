@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot name="myfirst">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://buoyager/meshes/buoyager.stl" scale="0.1 0.1 0.1" />
+      </geometry>
+    </visual>
+  </link>
+</robot>

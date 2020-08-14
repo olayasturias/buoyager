@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.83.4 commit date:2020-08-05, commit time:06:00, hash:c113af82881a</authoring_tool>
+    </contributor>
+    <created>2020-08-14T12:10:32</created>
+    <modified>2020-08-14T12:10:32</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="LG_Floatation_Device_Belt_Mat-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0 0 0 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">0.25</float>
+            </reflectivity>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="LG_Floatation_Device_Rope_Mat-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.7466667 0.7466667 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">0.25</float>
+            </reflectivity>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="LG_Floatation_Device_Body_Mat-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">1 0.25 0 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">0.5</float>
+            </reflectivity>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="LG_Floatation_Device_Belt_Mat-material" name="LG_Floatation_Device.Belt.Mat">
+      <instance_effect url="#LG_Floatation_Device_Belt_Mat-effect"/>
+    </material>
+    <material id="LG_Floatation_Device_Rope_Mat-material" name="LG_Floatation_Device.Rope.Mat">
+      <instance_effect url="#LG_Floatation_Device_Rope_Mat-effect"/>
+    </material>
+    <material id="LG_Floatation_Device_Body_Mat-material" name="LG_Floatation_Device.Body.Mat">
+      <instance_effect url="#LG_Floatation_Device_Body_Mat-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Belt_Mesh-mesh" name="Belt.Mesh">
+      <mesh>
+        <source id="Belt_Mesh-mesh-positions">
+          <float_array id="Belt_Mesh-mesh-positions-array" count="24">-0.008768737 -0.03467953 -0.000999987 -0.008768737 0.03467953 -0.000999987 0.008768737 0.03467953 -0.000999987 0.008768737 -0.03467953 -0.000999987 -0.008768737 -0.03467953 0.000999987 -0.008768737 0.03467953 0.000999987 0.008768737 0.03467953 0.000999987 0.008768737 -0.03467953 0.000999987</float_array>
+          <technique_common>
+            <accessor source="#Belt_Mesh-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Belt_Mesh-mesh-normals">
+          <float_array id="Belt_Mesh-mesh-normals-array" count="18">-1 0 0 0 1 0 1 0 0 0 -1 0 0 0 -1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Belt_Mesh-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Belt_Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Belt_Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="LG_Floatation_Device_Belt_Mat-material" count="12">
+          <input semantic="VERTEX" source="#Belt_Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Belt_Mesh-mesh-normals" offset="1"/>
+          <p>5 0 0 0 4 0 6 1 1 1 5 1 7 2 2 2 6 2 4 3 3 3 7 3 1 4 3 4 0 4 6 5 4 5 7 5 5 0 1 0 0 0 6 1 2 1 1 1 7 2 3 2 2 2 4 3 0 3 3 3 1 4 2 4 3 4 6 5 5 5 4 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Leash_Cap_Mesh-mesh" name="Leash.Cap.Mesh">
+      <mesh>
+        <source id="Leash_Cap_Mesh-mesh-positions">
+          <float_array id="Leash_Cap_Mesh-mesh-positions-array" count="48">-0.009446859 0.00999999 -0.004687488 -0.009446859 0.00999999 0.004687488 -7.18851e-5 0.00999999 0.004687488 -7.18851e-5 0.00999999 -0.004687488 -0.009446859 -0.00999999 -0.004687488 -0.009446859 -0.00999999 0.004687488 -7.18837e-5 -0.00999999 0.004687488 -7.18837e-5 -0.00999999 -0.004687488 1.89244e-6 0.00999999 -0.004687488 1.89244e-6 0.00999999 0.004687488 0.009376883 0.00999999 0.004687488 0.009376883 0.00999999 -0.004687488 1.89338e-6 -0.00999999 -0.004687488 1.89338e-6 -0.00999999 0.004687488 0.009376883 -0.00999999 0.004687488 0.009376883 -0.00999999 -0.004687488</float_array>
+          <technique_common>
+            <accessor source="#Leash_Cap_Mesh-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Leash_Cap_Mesh-mesh-normals">
+          <float_array id="Leash_Cap_Mesh-mesh-normals-array" count="54">-1 0 0 0 -6.28643e-7 1 1 0 0 0 6.28643e-7 -1 0 1 9.93411e-7 0 -1 -9.93411e-7 -1 0 0 1 0 0 -1 0 0 0 -5.82076e-7 1 1 0 0 0 5.82076e-7 -1 0 1 9.93412e-7 0 -1 -9.93411e-7 -1 0 0 1 0 0 0 5.82076e-7 -1 0 1 9.93411e-7</float_array>
+          <technique_common>
+            <accessor source="#Leash_Cap_Mesh-mesh-normals-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Leash_Cap_Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Leash_Cap_Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="LG_Floatation_Device_Rope_Mat-material" count="24">
+          <input semantic="VERTEX" source="#Leash_Cap_Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Leash_Cap_Mesh-mesh-normals" offset="1"/>
+          <p>4 0 1 0 0 0 5 1 2 1 1 1 7 2 2 2 6 2 4 3 3 3 7 3 1 4 3 4 0 4 6 5 4 5 7 5 12 6 9 6 8 6 13 1 10 1 9 1 15 7 10 7 14 7 12 3 11 3 15 3 9 4 11 4 8 4 14 5 12 5 15 5 4 8 5 8 1 8 5 9 6 9 2 9 7 10 3 10 2 10 4 11 0 11 3 11 1 12 2 12 3 12 6 13 5 13 4 13 12 14 13 14 9 14 13 9 14 9 10 9 15 15 11 15 10 15 12 16 8 16 11 16 9 17 10 17 11 17 14 13 13 13 12 13</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Rescue_Bouy_Mesh-mesh" name="Rescue_Bouy.Mesh">
+      <mesh>
+        <source id="Rescue_Bouy_Mesh-mesh-positions">
+          <float_array id="Rescue_Bouy_Mesh-mesh-positions-array" count="264">0.1307029 0.158349 0 0.09917998 -0.2515434 0 0 -0.2857398 0 0 0.4512925 0 0.1307029 0.1583487 0.0190348 0.09917992 -0.2515434 0.0190348 0 -0.2857398 0.0209636 0 0.4512925 0.01865887 0.06697678 0.3289343 0 0.05752855 -0.2843993 0 0.06697678 0.3289341 0.0269351 0.05752849 -0.2843993 0.02087998 0.05933105 0.3463844 0 0.04988282 -0.2857398 0 0.05933099 0.3463843 0.02918511 0.04988276 -0.2857398 0.02088606 0.1071642 0.2360914 0 0.07957339 -0.2718795 0 0.1041589 0.2360912 0.0190348 0.07960188 -0.2718795 0.0190348 0.09572756 0.2623206 0 0.075441 -0.275843 0 0.09572756 0.2623205 0.02299022 0.07543385 -0.275843 0.02088129 0.1307029 -0.1290251 0 0.1307029 -0.1289439 0.0190348 0 -0.1220065 0.04939508 0.0670675 -0.1369557 0 0.05942177 -0.1300137 0.04319983 0.1041588 -0.1289266 0.0190348 0.09572744 -0.1398513 0 0 0.2665854 0.0414341 0.1307029 0.08215564 0 0.1307029 0.08215546 0.0190348 0.06697684 0.2026606 0.03106153 0.05933105 0.2671496 0.03869956 0.1041588 0.166513 0.0190348 0.0957275 0.1845868 0.02299022 0 0.2404388 0.04939508 0.1307029 0.06589961 0 0.1307029 0.06589949 0.0190348 0.06706756 0.1799423 0 0.05942177 0.1931394 0.04319983 0.1041588 0.1457332 0.0190348 0.0957275 0.1628377 0 0.1307029 -0.1410295 0 0.1307029 -0.1409484 0.0190348 0.07892245 -0.1389337 0.01118212 0.05933099 -0.1380969 0.04319983 0.1041588 -0.1409019 0.0190348 0.08605128 -0.1412707 0.005862116 0 -0.1316342 0.04939508 0.1077803 -0.2387875 0 0.1077802 -0.2387523 0.0190348 0.05752849 -0.25432 0.02087998 0.04988276 -0.2544841 0.02088606 0.08779245 -0.2468322 0.0190348 0.08355897 -0.2487682 0.02088129 0 -0.2543084 0.0209636 0.1172052 -0.2138466 0 0.1172052 -0.2137984 0.0190348 0.08111673 -0.2438308 0.02056765 0.073471 -0.2530142 0 0.09471052 -0.220633 0.0190348 0.08711093 -0.2378953 0.02027732 0 -0.2529311 0 0.1218942 -0.2010802 0 0.1218941 -0.2010254 0.0190348 0.08111673 -0.2096186 0.02056765 0.073471 -0.2076061 0 0.09471052 -0.2065092 0.0190348 0.0868566 -0.2073155 0.02027732 0 -0.2077026 0 0.1228139 -0.1961989 0 0.1228138 -0.1961416 0.01903474 0.05752849 -0.2056199 0.02097558 0.04988276 -0.2055457 0.03211647 0.09471052 -0.201109 0.0190348 0.0868566 -0.2011016 0.02088129 0 -0.2056184 0.03831171 -2.66372e-4 0.3569896 0.02796167 0.01246571 0.3572569 0.02719229 -6.98143e-5 0.3316119 0.03273755 0.01267665 0.3314164 0.03129345 1.07531e-4 0.3584102 5.56318e-4 0.01283186 0.3586481 3.54735e-4 3.51993e-4 0.3332145 0.00182116 0.01308113 0.3329532 0.001644611</float_array>
+          <technique_common>
+            <accessor source="#Rescue_Bouy_Mesh-mesh-positions-array" count="88" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Rescue_Bouy_Mesh-mesh-normals">
+          <float_array id="Rescue_Bouy_Mesh-mesh-normals-array" count="381">0.001554846 0 0.9999989 0.8291462 -0.559032 3.80861e-6 -1.19489e-6 -1 -1.78781e-6 0.8704377 0.4922789 2.11815e-6 -5.29432e-5 1.60231e-5 1 0.4310222 -0.9023413 1.48287e-4 0.9181336 0.3962709 2.50815e-6 7.94228e-4 0 0.9999997 0.1727005 -0.9849745 0 0.9159398 0.4013158 1.81616e-6 1.87591e-6 -1.63246e-6 1 0.7199022 -0.6940747 -0.001076042 0.9359679 0.3195726 0.147775 0.4513369 -0.1475911 0.8800636 0.6922053 -0.7216999 -0.001036047 0.9520234 0.3060253 3.52038e-6 0.1036968 0 0.9946089 1 0 2.34851e-6 0.9846968 0 0.174277 0 0 1 -0.9143208 1.22156e-7 0.4049909 0.1135901 0.1318202 0.984744 1 0 0 0.270286 -6.01813e-7 0.9627801 0.7866054 0.02016711 0.6171267 0 0 1 0.4247174 -5.38973e-7 0.905326 0.1507818 0.060184 0.9867334 -0.3977732 -0.6664997 0.6305193 0.8915309 -0.3643616 0.2690974 -0.9143207 0 0.4049911 0.1037276 -0.001164376 0.9946051 1 0 2.34851e-6 0.5285073 -0.2409211 0.8140252 0.2617114 0.9591065 -0.1078054 0 0 1 -0.9143208 0 0.4049907 0.001128017 0.9974421 0.07147002 0.9354375 -0.3534916 6.57402e-4 -0.009697914 0.05861777 0.9982334 -0.3964185 0.8841117 -0.2473843 -7.02835e-7 -2.85944e-7 1 0.3763185 -0.09936749 0.9211464 0.9386863 -0.3447716 8.74293e-4 0.05034983 4.19432e-4 0.9987316 -0.9373311 0 0.34844 -2.71573e-7 1.86271e-6 1 0.1562588 0 0.9877162 0.001310646 -0.9978855 0.06498366 0.9827076 -0.1851634 5.34875e-4 0.0888108 -0.09635853 0.9913766 -0.1676135 -0.9852631 -0.03409409 2.1935e-7 6.09292e-6 1 0.2288618 0 0.973459 0.1215467 -0.1775014 0.9765857 0.9899302 -0.141556 4.28281e-4 0.6270759 0.1975849 0.7534828 0.8348591 -0.1920761 0.5158654 0 -5.39828e-7 1 -0.587001 0.09211766 0.8043283 0.02121442 0.9984194 0.05204576 0.006618261 0.1192204 0.9928458 -0.048002 -0.3764834 -0.925179 -0.9998453 -0.01041287 -0.01418107 0.01785111 -0.9985128 -0.05151438 0.001554906 0 0.9999989 0.8298603 -0.5579704 0.001036405 -1.19489e-6 -1 0 0.8704376 0.492279 2.02211e-6 -7.21408e-5 0 1 0.4311611 -0.902275 -3.31035e-7 0.9181336 0.3962714 4.46673e-6 7.94491e-4 0 0.9999997 0.1727007 -0.9849744 2.476e-6 0.9159393 0.4013171 2.72233e-6 1.97734e-6 -1.68927e-6 1 0.7204074 -0.6935513 3.4665e-6 0.9570912 0.2897871 3.61408e-6 0.5204278 -0.1561792 0.8395017 0.68916 -0.7246092 2.36129e-4 0.9072021 0.3955611 0.1432338 0.1036967 0 0.994609 1 -2.51111e-7 0 0.9846967 0 0.1742773 -1.27743e-7 0 1 -0.9143207 0 0.404991 0.04416269 0.1459525 0.9883054 0.2081485 0.03194576 0.9775754 0.4914475 0.1038322 0.8646956 0 -1.33853e-7 1 0.4247179 -6.61576e-7 0.9053258 0.04128593 0.2910242 0.9558246 -0.3237304 -0.7641344 0.5579402 0.8361902 0.03430807 0.5473654 -0.7771312 -0.4571784 0.4324986 0.1036968 0 0.994609 1 0 2.34851e-6 0.1002797 0.9925461 0.06925487 0.8528339 -0.009572088 0.5220947 -0.08854216 0.9916319 0.09394985 0.003616869 0.9978424 0.06555593 0.9354979 -0.3533312 8.96945e-4 -0.01227974 0.05734401 0.998279 -0.02139747 0.9987067 0.0461207 6.84406e-7 8.63298e-7 1 0.4330159 -0.09164661 0.8967153 0.9387441 -0.3446137 9.93811e-4 0.04837578 0 0.9988293 -0.9373311 0 0.3484401 -1.09926e-6 0 1 0.158439 0.001318454 0.9873679 0.008201658 -0.9984899 0.05431967 0.9827244 -0.1850743 5.59334e-4 0.009910464 -0.04346728 0.9990057 0.6795516 0.5694295 0.4625577 0.1650936 -0.0954132 0.981652 0.08679962 -0.1475951 0.9852317 0.9899386 -0.1414962 6.05731e-4 -0.02017736 0.1516043 0.9882353 0.8065111 -0.2041512 0.5548533 1.23839e-6 -1.50042e-7 1 0.2223787 0.240191 0.9449107 0.02121508 0.9984197 0.05204027 -0.005641758 0.1567005 0.9876301 -0.002958118 0.09817963 0.9951644 -0.9998453 -0.01041287 -0.01418101 0.01784986 -0.9985128 -0.0515154</float_array>
+          <technique_common>
+            <accessor source="#Rescue_Bouy_Mesh-mesh-normals-array" count="127" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Rescue_Bouy_Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Rescue_Bouy_Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="LG_Floatation_Device_Body_Mat-material" count="134">
+          <input semantic="VERTEX" source="#Rescue_Bouy_Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Rescue_Bouy_Mesh-mesh-normals" offset="1"/>
+          <p>55 0 6 0 15 0 52 1 5 1 1 1 15 2 2 2 13 2 12 3 7 3 14 3 54 4 23 4 57 4 23 5 9 5 21 5 22 6 8 6 10 6 55 7 11 7 54 7 11 8 13 8 9 8 10 9 12 9 14 9 56 10 5 10 53 10 1 11 19 11 17 11 4 12 16 12 18 12 57 13 19 13 56 13 19 14 21 14 17 14 18 15 20 15 22 15 42 16 26 16 28 16 39 17 25 17 24 17 41 18 28 18 27 18 40 19 29 19 25 19 43 20 30 20 29 20 31 21 83 21 82 21 4 22 32 22 0 22 22 23 34 23 37 23 10 24 35 24 34 24 4 25 36 25 33 25 18 26 37 26 36 26 35 27 38 27 42 27 33 22 39 22 32 22 37 28 41 28 44 28 34 29 42 29 41 29 33 25 43 25 40 25 36 30 44 30 43 30 28 31 51 31 48 31 24 32 46 32 45 32 30 33 47 33 50 33 28 34 47 34 27 34 25 35 49 35 46 35 30 36 49 36 29 36 65 37 55 37 62 37 59 38 53 38 52 38 61 39 57 39 64 39 62 40 54 40 61 40 63 41 53 41 60 41 64 42 56 42 63 42 66 43 60 43 59 43 68 44 64 44 71 44 69 45 61 45 68 45 70 46 60 46 67 46 71 47 63 47 70 47 76 48 72 48 69 48 73 49 67 49 66 49 78 50 68 50 71 50 75 51 69 51 68 51 77 52 67 52 74 52 78 53 70 53 77 53 48 54 79 54 76 54 45 55 74 55 73 55 47 56 78 56 50 56 48 57 75 57 47 57 49 58 74 58 46 58 50 59 77 59 49 59 83 60 86 60 82 60 14 61 83 61 35 61 14 62 80 62 81 62 81 63 87 63 83 63 81 64 84 64 85 64 55 65 58 65 6 65 52 66 53 66 5 66 15 67 6 67 2 67 12 68 3 68 7 68 54 69 11 69 23 69 23 70 11 70 9 70 22 71 20 71 8 71 55 72 15 72 11 72 11 73 15 73 13 73 10 74 8 74 12 74 56 75 19 75 5 75 1 76 5 76 19 76 4 77 0 77 16 77 57 78 23 78 19 78 19 79 23 79 21 79 18 80 16 80 20 80 42 81 38 81 26 81 39 82 40 82 25 82 41 83 42 83 28 83 40 84 43 84 29 84 43 85 44 85 30 85 31 86 35 86 83 86 4 22 33 22 32 22 22 87 10 87 34 87 10 88 14 88 35 88 4 89 18 89 36 89 18 90 22 90 37 90 35 91 31 91 38 91 33 22 40 22 39 22 37 92 34 92 41 92 34 93 35 93 42 93 33 25 36 25 43 25 36 94 37 94 44 94 28 95 26 95 51 95 24 96 25 96 46 96 30 97 27 97 47 97 28 98 48 98 47 98 25 25 29 25 49 25 30 99 50 99 49 99 65 100 58 100 55 100 59 101 60 101 53 101 61 102 54 102 57 102 62 103 55 103 54 103 63 104 56 104 53 104 64 105 57 105 56 105 66 106 67 106 60 106 68 107 61 107 64 107 69 108 62 108 61 108 70 109 63 109 60 109 71 110 64 110 63 110 76 111 79 111 72 111 73 112 74 112 67 112 78 113 75 113 68 113 75 114 76 114 69 114 77 25 70 25 67 25 78 115 71 115 70 115 48 116 51 116 79 116 45 117 46 117 74 117 47 118 75 118 78 118 48 119 76 119 75 119 49 120 77 120 74 120 50 121 78 121 77 121 83 122 87 122 86 122 14 123 81 123 83 123 14 124 7 124 80 124 81 125 85 125 87 125 81 126 80 126 84 126</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Rescue_Bouy" name="Rescue_Bouy" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Rescue_Bouy_Mesh-mesh" name="Rescue_Bouy">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="LG_Floatation_Device_Body_Mat-material" target="#LG_Floatation_Device_Body_Mat-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="Leash_Cap" name="Leash.Cap" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#Leash_Cap_Mesh-mesh" name="Leash.Cap">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="LG_Floatation_Device_Rope_Mat-material" target="#LG_Floatation_Device_Rope_Mat-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="Belt_Curve" name="Belt.Curve" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="Belt" name="Belt" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#Belt_Mesh-mesh" name="Belt">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="LG_Floatation_Device_Belt_Mat-material" target="#LG_Floatation_Device_Belt_Mat-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
